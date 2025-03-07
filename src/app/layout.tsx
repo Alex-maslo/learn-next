@@ -30,7 +30,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        {children}
+
+        <div className="box-border flex flex-col gap-2 items-center p-2">
+          {children}
+        </div>
       </body>
     </html>
   );

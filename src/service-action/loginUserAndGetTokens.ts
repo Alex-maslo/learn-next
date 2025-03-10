@@ -3,9 +3,6 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { IUserWithTokens } from "@/models/IUserWithTokens";
-import { allowedDisplayValues } from "next/dist/compiled/@next/font/dist/constants";
-import * as http2 from "node:http2";
-import { encodeToBase64 } from "next/dist/build/webpack/loaders/utils";
 import { btoa } from "node:buffer";
 
 export const loginUserAndGetTokens = async () => {

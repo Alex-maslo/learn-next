@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { cookies } from "next/headers";
 import { IUserWithTokens } from "@/models/IUserWithTokens";
 
@@ -21,9 +20,9 @@ const SingleUserPage = async (props: { params: Params }) => {
       Authorization: `Bearer ${user.accessToken}`,
       "Content-Type": "application/json",
     },
-  })
-    .then((res) => res.json())
-    .then(console.log);
+  });
+  const data = await res.json();
+  console.log(data);
 
   return <div>{id}</div>;
 };

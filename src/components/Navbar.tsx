@@ -10,7 +10,7 @@ const Navbar = async () => {
   const isAuth = cookieStore.has("user");
 
   return (
-    <div className="navbar bg-neutral text-neutral-content flex justify-around">
+    <div className="navbar bg-neutral text-neutral-content flex flex-col sm:flex-row justify-around">
       {isAuth ? (
         <>
           <SearchComponent />
